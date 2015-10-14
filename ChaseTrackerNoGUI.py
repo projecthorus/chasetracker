@@ -224,7 +224,7 @@ if __name__ == '__main__':
     try:
         ser = serial.Serial(port=serial_port,baudrate=serial_baud,timeout=5)
     except Exception as e:
-        gpsStatusLabel.setText("Serial Port Error: %s" % e)
+        print("Serial Port Error: %s" % e)
         sys.exit(1)
 
     while serial_running:
